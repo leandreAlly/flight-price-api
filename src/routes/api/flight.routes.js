@@ -11,6 +11,6 @@ import {
 const route = Router();
 
 route.post("/", auth, isAdmin, flightValidation, isFlightExist, scheduleFlight);
-route.get("/", findFlightPrice);
+route.post("/price", findFlightPrice);
 
 export default route;
