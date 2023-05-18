@@ -8,7 +8,7 @@ app.use(morgan("combined"));
 app.use(express.json());
 
 app.use("/api/v1", allRoutes);
-app.get("/api/v1", (req, res) => {
+app.get("/", (req, res) => {
   return res.status(200).json({ message: "Welcome to my Flight Price Api" });
 });
 
