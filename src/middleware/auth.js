@@ -1,8 +1,5 @@
-import dotenv from "dotenv";
 import { User } from "../models/users";
 import { verifyToken } from "../utils/token.util";
-
-dotenv.config();
 
 export const auth = async (req, res, next) => {
   try {
