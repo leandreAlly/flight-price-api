@@ -26,10 +26,9 @@ const scheduleFlight = async (req, res) => {
 };
 
 const findFlightPrice = async (req, res) => {
-  const { source, destination } = req.body;
-
   try {
-    const flight = await Flight.findOne({ source, destination });
+    const { source, destination, date } = req.body;
+    const flight = await Flight.findOne({ source, destination, date });
 
     if (!flight) {
       return res.status(404).json({ message: "No flights found" });
